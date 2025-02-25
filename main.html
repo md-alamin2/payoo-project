@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+</head>
+<body class="bg-slate-700">
+    <section class="max-w-md min-h-screen mx-auto bg-white py-6">
+        <header class="w-11/12 mx-auto">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <img class="w-14" src="assets/Group.png" alt="">
+                    <div>
+                        <h3 class="text-black text-3xl font-bold">$00000</h3>
+                        <p>Available Balance</p>
+                    </div>
+                </div>
+
+                <button id="logout-btn" class="btn bg-transparent"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" /><path d="M9 12h12l-3 -3" /><path d="M18 15l3 -3" /></svg>
+                   Log out</button>
+            </nav>
+
+            <section class="mt-6">
+                <h2 class="text-black text-2xl font-bold">🔥 Welcome to Payooo!</h2>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            </section>
+        </header>
+
+        <main class="w-11/12 mx-auto mt-6">
+            <!-- card container -->
+            <div class="grid grid-cols-3 gap-4">
+                <!-- card1 -->
+                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                    <img class="mx-auto" src="assets/wallet1.png" alt="">
+                    <p class="text-black mt-2 text-center">Add money</p>
+                </div>
+                <!-- card2 -->
+                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                    <img class="mx-auto" src="assets/send 1.png" alt="">
+                    <p class="text-black mt-2 text-center">Cashout</p>
+                </div>
+                <!-- card3 -->
+                <div class="border border-gray-300 py-5 px-1 rounded-xl">
+                    <img class="mx-auto" src="assets/money1.png" alt="">
+                    <p class="text-black mt-2 text-center">Transfer Money</p>
+                </div>
+                <!-- card4 -->
+                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                    <img class="mx-auto" src="assets/bonus1.png" alt="">
+                    <p class="text-black mt-2 text-center">Get Bonus</p>
+                </div>
+                <!-- card5 -->
+                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                    <img class="mx-auto" src="assets/purse1.png" alt="">
+                    <p class="text-black mt-2 text-center">Pay Bill</p>
+                </div>
+                <!-- card1 -->
+                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                    <img class="mx-auto" src="assets/transaction1.png" alt="">
+                    <p class="text-black mt-2 text-center">Transactions</p>
+                </div>
+                
+            </div>
+        </main>
+    </section>
+
+    <script src="js/logout.js"></script>
+</body>
+</html>
