@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
                 <div class="flex items-center gap-2">
                     <img class="w-14" src="assets/Group.png" alt="">
                     <div>
-                        <h3 class="text-black text-3xl font-bold">$00000</h3>
+                        <h3 class="text-black text-3xl font-bold">$ <span id="main-balance">00000</span></h3>
                         <p>Available Balance</p>
                     </div>
                 </div>
@@ -37,40 +37,76 @@
             <!-- card container -->
             <div class="grid grid-cols-3 gap-4">
                 <!-- card1 -->
-                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                <div id="card-1" class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/wallet1.png" alt="">
-                    <p class="text-black mt-2 text-center">Add money</p>
+                    <p class="text-black text-sm md:text-base mt-2 text-center">Add money</p>
                 </div>
                 <!-- card2 -->
-                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                <div class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/send 1.png" alt="">
-                    <p class="text-black mt-2 text-center">Cashout</p>
+                    <p class="text-black text-sm md:text-base mt-2 text-center">Cashout</p>
                 </div>
                 <!-- card3 -->
-                <div class="border border-gray-300 py-5 px-1 rounded-xl">
+                <div class="border border-gray-300 py-5 px-1 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/money1.png" alt="">
-                    <p class="text-black mt-2 text-center">Transfer Money</p>
+                    <p class="text-black text-sm md:text-base mt-2 text-center">Transfer Money</p>
                 </div>
                 <!-- card4 -->
-                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                <div class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/bonus1.png" alt="">
-                    <p class="text-black mt-2 text-center">Get Bonus</p>
+                    <p class="text-black text-sm md:text-base mt-2 text-center">Get Bonus</p>
                 </div>
                 <!-- card5 -->
-                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                <div class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/purse1.png" alt="">
-                    <p class="text-black mt-2 text-center">Pay Bill</p>
+                    <p class="text-black text-sm md:text-base mt-2 text-center">Pay Bill</p>
                 </div>
                 <!-- card1 -->
-                <div class="border border-gray-300 py-5 px-5 rounded-xl">
+                <div class="border border-gray-300 py-5 px-3 md:px-5  rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/transaction1.png" alt="">
-                    <p class="text-black mt-2 text-center">Transactions</p>
+                    <p class="text-black text-sm md:text-base mt-2 text-center">Transactions</p>
                 </div>
                 
             </div>
+
+            <section id="add-money-section" class="mt-4 hidden">
+                <h2 class="text-2xl font-bold">Add Money</h2>
+                <!-- add money form -->
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <span class="label-text">Select Bank</span>
+                            <select class="select select-bordered w-full max-w-xs">
+                                <option disabled selected>Select your bank</option>
+                                <option value="Nagad">Nagad</option>
+                                <option value="Rocket">Rocket</option>
+                                <option value="Bkash">Bkash</option>
+                              </select>
+                              <label class="label">
+                                <span class="label-text">Your Amount</span>
+                              </label>
+                              <input id="amount" type="text" placeholder="Type your number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">PIN</span>
+                              </label>
+                              <input id="account-pin" type="text" placeholder="Type your PIN" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="add-money-btn" class="btn hover:bg-blue-700">Add money</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </section>
         </main>
     </section>
 
     <script src="js/logout.js"></script>
+    <script src="js/add_money.js"></script>
 </body>
 </html>
