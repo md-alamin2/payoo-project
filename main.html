@@ -18,7 +18,7 @@
                 <div class="flex items-center gap-2">
                     <img class="w-14" src="assets/Group.png" alt="">
                     <div>
-                        <h3 class="text-black text-3xl font-bold">$ <span id="main-balance">00000</span></h3>
+                        <h3 class="text-black text-3xl font-bold">$ <span id="main-balance">00100</span></h3>
                         <p>Available Balance</p>
                     </div>
                 </div>
@@ -42,35 +42,36 @@
                     <p class="text-black text-sm md:text-base mt-2 text-center">Add money</p>
                 </div>
                 <!-- card2 -->
-                <div class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
+                <div id="card-2" class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/send 1.png" alt="">
                     <p class="text-black text-sm md:text-base mt-2 text-center">Cashout</p>
                 </div>
                 <!-- card3 -->
-                <div class="border border-gray-300 py-5 px-1 rounded-xl hover:bg-blue-500 cursor-pointer">
+                <div id="card-3" class="border border-gray-300 py-5 px-1 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/money1.png" alt="">
                     <p class="text-black text-sm md:text-base mt-2 text-center">Transfer Money</p>
                 </div>
                 <!-- card4 -->
-                <div class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
+                <div id="card-4" class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/bonus1.png" alt="">
                     <p class="text-black text-sm md:text-base mt-2 text-center">Get Bonus</p>
                 </div>
                 <!-- card5 -->
-                <div class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
+                <div id="card-5" class="border border-gray-300 py-5 px-3 md:px-5 rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/purse1.png" alt="">
                     <p class="text-black text-sm md:text-base mt-2 text-center">Pay Bill</p>
                 </div>
                 <!-- card1 -->
-                <div class="border border-gray-300 py-5 px-3 md:px-5  rounded-xl hover:bg-blue-500 cursor-pointer">
+                <div id="card-6" class="border border-gray-300 py-5 px-3 md:px-5  rounded-xl hover:bg-blue-500 cursor-pointer">
                     <img class="mx-auto" src="assets/transaction1.png" alt="">
                     <p class="text-black text-sm md:text-base mt-2 text-center">Transactions</p>
                 </div>
                 
             </div>
 
+            <!-- add money section -->
             <section id="add-money-section" class="mt-4 hidden">
-                <h2 class="text-2xl font-bold">Add Money</h2>
+                <h2 class="text-2xl font-bold text-blue-500">Add Money</h2>
                 <!-- add money form -->
                 <div class="">
                     <div class="hero-content flex-col lg:flex-row-reverse">
@@ -78,8 +79,8 @@
                         <form class="card-body">
                           <div class="form-control">
                             <span class="label-text">Select Bank</span>
-                            <select class="select select-bordered w-full max-w-xs">
-                                <option disabled selected>Select your bank</option>
+                            <select class="select select-bordered w-full max-w-xs" required>
+                                <option value="" disabled selected>Select your bank</option>
                                 <option value="Nagad">Nagad</option>
                                 <option value="Rocket">Rocket</option>
                                 <option value="Bkash">Bkash</option>
@@ -87,7 +88,7 @@
                               <label class="label">
                                 <span class="label-text">Your Amount</span>
                               </label>
-                              <input id="amount" type="text" placeholder="Type your number" class="input input-bordered" required />
+                              <input id="amount" type="text" placeholder="Type your amount" class="input input-bordered" required />
                           </div>
                           <div class="form-control">
                             <label class="label">
@@ -103,10 +104,47 @@
                     </div>
                   </div>
             </section>
+
+            <!-- cash out section -->
+            <section id="cash-out-section" class="mt-4 hidden">
+                <h2 class="text-2xl font-bold text-blue-500">Cash out</h2>
+                <!-- cash out form -->
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                              <label class="label">
+                                <span class="label-text">Agent number</span>
+                              </label>
+                              <input id="agent-num" type="number" placeholder="11 dig number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                              <label class="label">
+                                <span class="label-text">Cash out amount</span>
+                              </label>
+                              <input id="cash-out-amount" type="text" placeholder="Type your amount" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">PIN</span>
+                              </label>
+                              <input id="cash-out-pin" type="text" placeholder="Type your PIN" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="cash-out-btn" class="btn hover:bg-blue-700">Cash out</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </section>
         </main>
     </section>
 
     <script src="js/logout.js"></script>
     <script src="js/add_money.js"></script>
+    <script src="js/toggole.js"></script>
+    <script src="js/cash_out.js"></script>
 </body>
 </html>

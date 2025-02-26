@@ -1,7 +1,3 @@
-const addMoneyBtn = document.getElementById('card-1').addEventListener('click', function(){
-    document.getElementById('add-money-section').style.display= 'block';
-});
-
 // add money event
 const addMoney = document.getElementById('add-money-btn').addEventListener('click', function(event){
     event.preventDefault();
