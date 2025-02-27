@@ -1,12 +1,22 @@
 // add money
 const addMoneyBtn = document.getElementById('card-1').addEventListener('click', function(){
-    document.getElementById('add-money-section').style.display= 'block';
-    document.getElementById('cash-out-section').style.display= 'none';
+    handleToggle("add-money-section", "block");
+    handleToggle("cash-out-section", "none");
+    handleToggle("transaction-history-section", "none");
 });
 
 // cash out
 
-const addCashOutBtn = document.getElementById('card-2').addEventListener('click', function(){
-    document.getElementById('cash-out-section').style.display= 'block';
-    document.getElementById('add-money-section').style.display= 'none';
+const CashOutBtn = document.getElementById('card-2').addEventListener('click', function(){
+    handleToggle("cash-out-section", "block");
+    handleToggle("add-money-section", "none");
+    handleToggle("transaction-history-section", "none");
+});
+
+// transaction history
+
+const transactionHistoryBtn = document.getElementById('card-6').addEventListener('click', function(){
+    handleToggle("transaction-history-section", "block");
+    handleToggle("cash-out-section", "none");
+    handleToggle("add-money-section", "none");
 });
